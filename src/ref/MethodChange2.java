@@ -10,7 +10,6 @@ public class MethodChange2 {
         System.out.println("매서드 호출 후 : dataA.value = " + dataA.value);
 
     }
-
     static void changeRdference(Data datax) {
         System.out.println("datax = " + datax);
         datax.value = 20;

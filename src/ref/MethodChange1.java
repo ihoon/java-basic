@@ -7,7 +7,6 @@ public class MethodChange1 {
         changePrimitive(a);
         System.out.println("a = " + a);
     }
-
     static void changePrimitive(int x) {
         x = 20;
     }
