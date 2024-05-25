@@ -5,16 +5,21 @@ public class DecoData {
     private static int staticValue;
 
     public static void staticCall() {
+        staticValue++;
+        staticMethod();
+    }
+
+    public static void staticCall(DecoData data) {
         //instanceValue++;  //인스턴스 변수 접근 , compile error
         //instanceMethod(); //인스턴스 매서드 접근 , compile error
 
-        staticValue; //정정 변수 접근
-        staticMethod(); //정정 매서드 접근
+        staticValue++; //정적 변수 접근
+        staticMethod(); //정적 매서드 접근
     }
 
     public void instanceCall() {
-        staticValue; //정정 변수 접근
-        staticMethod(); //정정 매서드 접근
+        staticValue++; //정적 변수 접근
+        staticMethod(); //정적 매서드 접근
     }
 
     private void instanceMethod() {
@@ -22,7 +27,7 @@ public class DecoData {
     }
 
     private static void staticMethod() {
-        System.out.println("instanceValue = " + staticValue);
+        System.out.println("staticValue = " + staticValue);
 
     }
 }
